@@ -1,0 +1,248 @@
+<html>
+	<head id="top">
+		<link rel="stylesheet" type="text/css" href="portfolio.css">
+		<link href="https://fonts.googleapis.com/css?family=Maitree:400,700|Roboto+Condensed:400,400i,700" rel="stylesheet">
+		<link rel="stylesheet" href="prism-atom-dark.css" type="text/css" media="screen"/>
+	 <meta name="viewport" content="width=device-width"/>
+	 <script type="text/javascript" src="prism.js"></script>
+	 <script type="text/javascript" src="prism.ruby.js"></script>
+	 <title>Devin O'Leary</title>
+	 <meta name="description" content="Devin O'Leary is a professional
+				 software engineer specializing in full-stack development.
+				 He has extensive experience with Ruby, Rails, JavaScript,
+				 and building web applications.">
+	<script src="jquery-3.1.1.min.js" type="text/javascript"></script>
+	</head>
+
+	<body>
+		<div class="about_container">
+			<ul class="nav_container">
+				<li><a href="" class="nav_link">About</a></li>
+				<li><a href="#code_sample" class="nav_link">Code Samples</a></li>
+				<li><a href="#web_apps" class="nav_link">Web Apps</a></li>
+				<li><a href="#tools" class="nav_link">Skills &amp; Tools</a></li>
+				<li class="hire_me"><a href="#hire_me" class="nav_link">Hire Me</a></li>
+			</ul>
+			<div class="about">
+				<img src="images/me.jpg" alt="Devin O'Leary" class="profile_pic"/>
+				<h1>Devin O'Leary</h1>
+				<h2>Full Stack Developer</h2>
+					<hr class="hr_white"/>
+					<p class="bio">
+						I quit my job to start creating websites a few months ago.
+						Now I'm moving forward to start making rad applications to save the world!
+					</p>
+			</div>
+		</div>
+		<a href="#top"><button class="top_button">Top</button></a>
+		<h3 id="code_sample">Code Snippets</h3>
+		<hr class="underline blue">
+
+<!--Temp conversion row  -->
+		<article class="flex_container">
+			<div class="column one">
+				<h4>Temperature Conversion</h4>
+				<p> This ruby program will prompt the user for a temperature
+        in degrees Celsius and let the user know what the
+        corresponding temperature is in Fahrenheit.</p>
+			</div>
+			<div class="column two">
+				<pre><code class="language-ruby">
+def celcius_to_fahrenheit(cel)
+  return cel * 9 / 5 + 32
+end
+puts &quot;Enter temperature in Celcius: &quot;
+cel = gets.to_i
+puts &quot;The temerature in Fahrenheit is
+#{celcius_to_fahrenheit(cel)} degrees&quot;
+			</code></pre>
+		</div>
+		</article>
+<!-- Ordinal Challenge Row -->
+		<article class="flex_container reverse">
+			<div class="column one">
+				<pre><code class="language-ruby">
+puts &quot;Enter your favorite number!&quot;
+pos = gets.to_i
+
+def ordinal(pos)
+  right_digit = pos % 10
+  right_two_digits = pos % 100
+  if right_digit == 1 &amp;&amp; right_two_digits != 11
+    return &quot;#{pos}st&quot;
+  elsif right_digit == 2 &amp;&amp; right_two_digits != 12
+    return &quot;#{pos}nd&quot;
+  elsif right_digit == 3 &amp;&amp; right_two_digits != 13
+    return &quot;#{pos}rd&quot;
+    else
+    return &quot;#{pos}th&quot;
+  end
+end
+
+puts &quot;That is my #{ordinal(pos)} favorite number!&quot;
+			</code></pre>
+
+		</div>
+			<div class="column two">
+				<h4>Ordinal Challenge</h4>
+				<p>  This ruby program will convert a plain number
+    to the ordinal of the number. So for example,
+    if the user enters 2, it will display 2nd, if
+    the user enters 3, it will display 3rd, etc.</p>
+	</div>
+		</article>
+
+		<article class="flex_container">
+			<div class="column one">
+				<h4>Foobar</h4>
+				<p>This ruby program is an adaptation of a classic technical
+    interview problem which displays sequences
+    of the Foobar pattern.</p>
+	</div>
+			<div class="column two">
+				<pre><code class="language-ruby">
+puts &quot;How high should we count to?&quot;
+number = gets.to_i
+
+def foobar(n)
+  foo = n % 3
+  bar = n % 5
+  if foo == 0 &amp;&amp; bar == 0
+    puts &quot;Foobar&quot;
+  elsif foo == 0
+    puts &quot;Foo&quot;
+  elsif bar == 0
+    puts &quot;Bar&quot;
+  else
+    puts n
+  end
+end
+
+n = 1
+while n &lt;= number
+  foobar(n)
+  n = n + 1
+end
+				</code></pre>
+
+			</section>
+		</article>
+		<h3 id="web_apps">Web Applications</h3>
+		<hr class="underline blue">
+
+		<article class="flex_container">
+			<div class="column">
+				<h4>Quote Generator</h4>
+				<figure>
+					<img src="images/splurty.png" alt="splurty" class="full_width"/>
+					<figcaption>A database-powered quote generator with a mobile-first
+	        design, using the Ruby on Rails framework, HTML, and CSS.
+	        Uses Git and GitHub for version control, and launched
+	        on Heroku.</figcaption>
+				<figure>
+			</div>
+		</article>
+
+		<article class="flex_container">
+			<div class="column">
+		  	<h4>Yelp Clone</h4>
+				<figure>
+		  		<img src="images/nomster.png" class="full_width" />
+				  <figcaption>
+				    A Yelp clone that integrates with the Google Maps API
+				    and includes features like user comments, star ratings,
+				    image uploading, and user authentication.
+				  </figcaption>
+				</figure>
+			</div>
+		</article>
+
+		<article class="flex_container">
+				<div class="column">
+			  <h4>Two-Sided Market Place</h4>
+				<figure>
+				  <img src="images/flixter.png" class="full_width" />
+				  <figcaption>
+				    A two-sided, video-streaming marketplace platform that
+				    features credit card payment capabilities, user role
+				    management, complex user interfaces, and advanced
+				    database relationships.
+				  </figcaption>
+				</figure>
+			</div>
+		</article>
+
+		<article class="flex_container">
+			<div class="column">
+			  <h4>Test Driven Development</h4>
+				<figure>
+				  <img src="images/grammable.png" class="full_width" />
+				  <figcaption>
+				    An Instagram clone that was built using industry-standard, test-driven
+				    development following numerous red/green/refactor cycles.
+				  </figcaption>
+				</figure>
+			</div>
+		</article>
+
+		<article class="flex_container">
+			<div class="column">
+			  <h4>Single Page Todo Application</h4>
+				<figure>
+				  <img src="images/todoster.png" class="full_width" />
+				  <figcaption>
+				    This single-page to-do application features a
+				    fluid user interface that– by using JavaScript–
+				    allows users to rapidly add dynamic content.
+				  </figcaption>
+				</figure>
+			</div>
+		</article>
+
+		<article class="flex_container">
+			<div class="column">
+			  <h4>Agile Team Project</h4>
+				<figure>
+					<img src="images/chess.png" class="full_width" />
+				  <figcaption>
+					    Worked on an Agile software development team building
+					    a chess application. Under the guidance of a senior software engineer,
+					    we had weekly Agile team meetings for code reviews, sprint planning,
+					    and feature assignments.
+					</figcaption>
+				</figure>
+			</div>
+		</article>
+		<h3 id="tools">Skills &amp Tools</h3>
+		<hr class="underline blue">
+			<p class="skills_n_tools">
+	  Devin will develop proficiency and expertise
+	  in the following programming languages and
+	  comfort with the following tools.
+			</p>
+			<section class="icons_container">
+				<!-- <img src="images/skills-and-tools/github.png" alt="github"/> -->
+				<img src="images/skills-and-tools/rubocop.png" />
+				<img src="images/skills-and-tools/trello.png" />
+				<img src="images/skills-and-tools/slack.png" />
+				<img src="images/skills-and-tools/codeship.png" />
+				<br/>
+				<img src="images/skills-and-tools/skills.png" class="skills"/>
+		</section>
+		<section class="contact_me">
+			<h2 id="hire_me">Contact</h2>
+			<hr class="underline blue">
+			<p class="contact_info">
+			Currently entertaining new opportunities.
+			Please get in touch via email:
+			</p>
+			<p>
+				<a href="mailto:djoleary07@gmail.com" class="contact_link">
+					djoleary07@gmail.com
+				</a>
+			</p>
+		</section>
+		<script src="JS.js"></script>
+	</body>
+
+</html>
